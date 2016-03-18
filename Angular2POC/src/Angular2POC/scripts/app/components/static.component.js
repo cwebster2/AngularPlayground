@@ -18,21 +18,20 @@ System.register(["angular2/core"], function(exports_1, context_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StaticComponent = (function () {
-                function StaticComponent() {
+            let StaticComponent = class StaticComponent {
+                constructor() {
                 }
-                StaticComponent.prototype.ngOnInit = function () {
+                ngOnInit() {
                     this.message = "The 'static.html' was used as the Angular2 'templateUrl'. There is a 'message' property bound to the <blockqoute> element.";
-                };
-                StaticComponent = __decorate([
-                    core_1.Component({
-                        selector: "static",
-                        templateUrl: "/app/components/static.html"
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], StaticComponent);
-                return StaticComponent;
-            }());
+                }
+            };
+            StaticComponent = __decorate([
+                core_1.Component({
+                    selector: "static",
+                    templateUrl: "app/components/static.html"
+                }), 
+                __metadata('design:paramtypes', [])
+            ], StaticComponent);
             exports_1("StaticComponent", StaticComponent);
         }
     }

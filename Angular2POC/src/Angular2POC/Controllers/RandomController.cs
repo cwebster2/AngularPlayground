@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
 
-namespace WebApplication1.Controllers
+namespace Angular2POC.Controllers
 {
     [Route("api/[controller]")]
     public class RandomController : Controller

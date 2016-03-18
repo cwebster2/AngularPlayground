@@ -11,30 +11,29 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StaticComponent;
+    var MvcComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StaticComponent = (function () {
-                function StaticComponent() {
+            let MvcComponent = class MvcComponent {
+                constructor() {
                 }
-                StaticComponent.prototype.ngOnInit = function () {
-                    this.message = "The 'static.html' was used as the Angular2 'templateUrl'. There is a 'message' property bound to the <blockqoute> element.";
-                };
-                StaticComponent = __decorate([
-                    core_1.Component({
-                        selector: "static",
-                        templateUrl: "/app/components/static.html"
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], StaticComponent);
-                return StaticComponent;
-            }());
-            exports_1("StaticComponent", StaticComponent);
+                ngOnInit() {
+                    this.message = "The '/partial/message' path was used as the Angular2 'templateUrl'. However, this routes through the 'PartialController' hitting the 'Message' action and is served after standard MVC pre-processing. Likewise, there is a 'message' property bound to the <blockqoute> element.";
+                }
+            };
+            MvcComponent = __decorate([
+                core_1.Component({
+                    selector: "mvc",
+                    templateUrl: "/partial/message"
+                }), 
+                __metadata('design:paramtypes', [])
+            ], MvcComponent);
+            exports_1("MvcComponent", MvcComponent);
         }
     }
 });
-//# sourceMappingURL=static.component.js.map
+//# sourceMappingURL=mvc.component.js.map

@@ -34,6 +34,13 @@ var fonts = [
     './node_modules/bootstrap/dist/fonts/*.*'
 ];
 
+var app_html = [
+    './scripts/app/*.html'
+];
+var component_html = [
+    './scripts/app/components/*.html'
+];
+
 gulp.task('copy-js', function () {
     _.forEach(js, function (file, _) {
         gulp.src(file)
@@ -57,6 +64,17 @@ gulp.task('copy-min-js', function () {
             .pipe(uglify())
             .pipe(rename({ extname: '.min.js' }))
             .pipe(gulp.dest('./wwwroot/js/angular2'))
+    });
+});
+
+gulp.task('copy-html', function() {
+    _.forEach(app_html, function(file, _) {
+        gulp.src(file)
+            .pipe(gulp.dest('./wwwroot/app'))
+    });
+    _.forEach(component_html, function(file, _) {
+        gulp.src(file)
+            .pipe(gulp.dest('./wwwroot/app/components'))
     });
 });
 
@@ -84,5 +102,5 @@ gulp.task('copy-min-css', function () {
     });
 });
 
-gulp.task('default', ['copy-js', 'copy-css']);
-gulp.task('minify', ['copy-min-js', 'copy-min-css']);
+gulp.task('default', ['copy-js', 'copy-css', 'copy-html']);
+gulp.task('minify', ['copy-min-js', 'copy-min-css', 'copy-html']);
