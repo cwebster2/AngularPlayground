@@ -12,7 +12,8 @@ var angularJs = [
     './node_modules/angular2/bundles/angular2.dev.js',
     './node_modules/angular2/bundles/router.dev.js',
     './node_modules/angular2/bundles/angular2-polyfills.js',
-    './node_modules/angular2/bundles/http.dev.js'
+    './node_modules/angular2/bundles/http.dev.js',
+    './node_modules/angular2/bundles/js'
 ];
 
 var js = [
@@ -20,7 +21,9 @@ var js = [
     './node_modules/systemjs/dist/system.js',
     './node_modules/rxjs/bundles/Rx.js',
     './node_modules/typescript/lib/typescript.js',
-    './node_modules/jquery/dist/jquery.js'
+    './node_modules/jquery/dist/jquery.js',
+    './node_modules/es6-shim/es6-shim.min.js*',
+    './node_modules/angular2/es6/dev/src/testing/shims_for_IE.js'
 ];
 
 var css = [

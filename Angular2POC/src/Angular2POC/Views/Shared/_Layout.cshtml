@@ -8,14 +8,18 @@
     <environment names="Development">
                  <!-- Css -->
                  <link rel="stylesheet" asp-href-include="~/css/*.css">
-                 <!-- Js -->
+        <!-- Js -->
+        <script src="~/js/es6-shim.min.js"></script>
+        <!--<script src="~/app/polyfill.js"></sript></>-->
+        <script src="~/js/shims_for_IE.js"></script>
+        
         <script src="~/js/jquery.js"></script>
-        <script src="~/js/bootstrap.js"></script>
         <script src="~/js/system.js"></script>
-        <script src="~/js/rx.js"></script>
         <script src="~/js/typescript.js"></script>
+        <script src="~/js/bootstrap.js"></script>        
+        <script src="~/js/rx.js"></script>
         <script src="~/js/angular2/angular2.dev.js"></script>
-        <script src="~/js/angular2/angular2-polyfills.js"></script>
+        <script src="~/js/angular2/angular2-polyfills.js"></script>        
         <script src="~/js/angular2/http.dev.js"></script>
         <script src="~/js/angular2/router.dev.js"></script>
     </environment>

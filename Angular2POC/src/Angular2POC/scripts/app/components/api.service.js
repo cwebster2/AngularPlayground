@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(["rxjs/Rx", "angular2/http", "angular2/core"], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,32 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var StaticComponent;
+    var http_1, core_1;
+    var ApiService;
     return {
         setters:[
+            function (_1) {},
+            function (http_1_1) {
+                http_1 = http_1_1;
+            },
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StaticComponent = (function () {
-                function StaticComponent() {
+            let ApiService = class ApiService {
+                constructor(http) {
+                    this.http = http;
                 }
-                StaticComponent.prototype.ngOnInit = function () {
-                    this.message = "The 'static.html' was used as the Angular2 'templateUrl'. There is a 'message' property bound to the <blockqoute> element.";
-                };
-                StaticComponent = __decorate([
-                    core_1.Component({
-                        selector: "static",
-                        templateUrl: "app/components/static.html"
-                    }), 
-                    __metadata('design:paramtypes', [])
-                ], StaticComponent);
-                return StaticComponent;
-            }());
-            exports_1("StaticComponent", StaticComponent);
+                get(onNext) {
+                    this.http.get("api/random").map(response => response.json()).subscribe(onNext);
+                }
+            };
+            ApiService = __decorate([
+                core_1.Injectable(), 
+                __metadata('design:paramtypes', [http_1.Http])
+            ], ApiService);
+            exports_1("ApiService", ApiService);
         }
     }
 });
-//# sourceMappingURL=static.component.js.map
+//# sourceMappingURL=api.service.js.map
