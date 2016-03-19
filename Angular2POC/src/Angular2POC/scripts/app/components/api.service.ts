@@ -7,6 +7,6 @@ export class ApiService {
     constructor(private http: Http) { }
 
     get(onNext: (json: any) => void) {
-        this.http.get("api/random").map(response => response.json()).subscribe(onNext);
+        this.http.get("/api/random").map(response => response.json()).subscribe(onNext);
     }
 }

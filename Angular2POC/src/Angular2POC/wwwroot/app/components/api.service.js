@@ -27,7 +27,7 @@ System.register(["rxjs/Rx", "angular2/http", "angular2/core"], function(exports_
                     this.http = http;
                 }
                 ApiService.prototype.get = function (onNext) {
-                    this.http.get("api/random").map(function (response) { return response.json(); }).subscribe(onNext);
+                    this.http.get("/api/random").map(function (response) { return response.json(); }).subscribe(onNext);
                 };
                 ApiService = __decorate([
                     core_1.Injectable(), 
