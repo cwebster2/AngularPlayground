@@ -1,7 +1,5 @@
 // Vendors
-System.register(['angular2/platform/browser', 'angular2/core', 'angular2/http', 'angular2/router'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['angular2/platform/browser', 'angular2/core', 'angular2/http', 'angular2/router'], function(exports_1) {
     return {
         setters:[
             function (_1) {},
