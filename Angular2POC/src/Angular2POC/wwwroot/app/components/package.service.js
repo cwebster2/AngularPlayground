@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(['./mock-packages', 'angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,31 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var StaticComponent;
+    var mock_packages_1, core_1;
+    var PackageService;
     return {
         setters:[
+            function (mock_packages_1_1) {
+                mock_packages_1 = mock_packages_1_1;
+            },
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StaticComponent = (function () {
-                function StaticComponent() {
+            PackageService = (function () {
+                function PackageService() {
                 }
-                StaticComponent.prototype.ngOnInit = function () {
-                    this.message = "The 'static.html' was used as the Angular2 'templateUrl'. There is a 'message' property bound to the <blockqoute> element.";
+                PackageService.prototype.getPackages = function () {
+                    return mock_packages_1.PACKAGES;
                 };
-                StaticComponent = __decorate([
-                    core_1.Component({
-                        selector: "static",
-                        templateUrl: "/app/components/static.html"
-                    }), 
+                PackageService = __decorate([
+                    core_1.Injectable(), 
                     __metadata('design:paramtypes', [])
-                ], StaticComponent);
-                return StaticComponent;
+                ], PackageService);
+                return PackageService;
             }());
-            exports_1("StaticComponent", StaticComponent);
+            exports_1("PackageService", PackageService);
         }
     }
 });
-//# sourceMappingURL=static.component.js.map
+//# sourceMappingURL=package.service.js.map

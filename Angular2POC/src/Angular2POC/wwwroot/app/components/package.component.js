@@ -1,0 +1,21 @@
+System.register([], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
+    var FilePackage;
+    return {
+        setters:[],
+        execute: function() {
+            FilePackage = (function () {
+                function FilePackage(id, name, caseReference, files) {
+                    this.id = id;
+                    this.name = name;
+                    this.caseReference = caseReference;
+                    this.files = files;
+                }
+                return FilePackage;
+            }());
+            exports_1("FilePackage", FilePackage);
+        }
+    }
+});
+//# sourceMappingURL=package.component.js.map

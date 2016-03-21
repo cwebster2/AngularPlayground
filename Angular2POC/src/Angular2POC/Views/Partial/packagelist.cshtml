@@ -1,0 +1,8 @@
+﻿<div style="text-align: left; margin-left: 0;">
+    <h3>Recent Packages</h3>
+    <ul style="list-style-type: none;">
+        <li *ngFor="#package of packages"><a href="#" (click)="onSelect(package)">{{package.name}}</a></li>
+    </ul>
+
+    <package-detail [package]="selectedPackage"></package-detail>
+</div>

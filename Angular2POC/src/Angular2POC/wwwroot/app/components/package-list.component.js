@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(['angular2/core', './package-detail.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,31 +10,36 @@ System.register(["angular2/core"], function(exports_1, context_1) {
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1;
-    var StaticComponent;
+    var core_1, package_detail_component_1;
+    var PackageListComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
+            },
+            function (package_detail_component_1_1) {
+                package_detail_component_1 = package_detail_component_1_1;
             }],
         execute: function() {
-            StaticComponent = (function () {
-                function StaticComponent() {
+            PackageListComponent = (function () {
+                function PackageListComponent() {
                 }
-                StaticComponent.prototype.ngOnInit = function () {
-                    this.message = "The 'static.html' was used as the Angular2 'templateUrl'. There is a 'message' property bound to the <blockqoute> element.";
+                PackageListComponent.prototype.onSelect = function (mypackage) {
+                    this.selectedPackage = mypackage;
                 };
-                StaticComponent = __decorate([
+                PackageListComponent = __decorate([
                     core_1.Component({
-                        selector: "static",
-                        templateUrl: "/app/components/static.html"
+                        selector: 'package-list',
+                        templateUrl: '/partial/packagelist',
+                        directives: [package_detail_component_1.PackageDetailComponent],
+                        inputs: ['packages']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StaticComponent);
-                return StaticComponent;
+                ], PackageListComponent);
+                return PackageListComponent;
             }());
-            exports_1("StaticComponent", StaticComponent);
+            exports_1("PackageListComponent", PackageListComponent);
         }
     }
 });
-//# sourceMappingURL=static.component.js.map
+//# sourceMappingURL=package-list.component.js.map

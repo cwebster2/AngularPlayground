@@ -1,12 +1,16 @@
-﻿import {Component, EventEmitter, Output} from 'angular2/core'
+﻿import {Component, EventEmitter, Output, OnInit} from 'angular2/core'
 import {NgForm}    from 'angular2/common';
 import {FilePackage} from './package.component';
 import {File} from './file';
 
+declare var $: any;
+declare var Dropzone: any;
+
+
 @Component({
     selector: 'package-new',
     providers: [],
-    templateUrl: 'src/package-new.html',
+    templateUrl: '/partial/packagenew',
 })
 export class PackageNewComponent implements OnInit {
     @Output() onNewPackageCreated = new EventEmitter<FilePackage>();
@@ -14,18 +18,18 @@ export class PackageNewComponent implements OnInit {
     submitted: boolean = false;
 
     constructor() {
-        this.newPackage = new FilePackage();
+        this.newPackage = new FilePackage(0, "Null", "None", []);
         this.newPackage.files = [];
     }
 
     ngOnInit() {
         window.addEventListener("drop", function (e) {
-            e = e || event;
+            //e = e || event;
             e.preventDefault();
             return false;
         }, false);
         window.addEventListener("dragover", function (e) {
-            e = e || event;
+            //e = e || event;
             e.preventDefault();
         });
 

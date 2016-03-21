@@ -4,6 +4,8 @@ import {PackageService} from './package.service';
 import {PackageListComponent} from './package-list.component';
 import {PackageNewComponent} from './package-new.component';
 
+declare var toastr: any;
+
 @Component({
     selector: "cmpoc",
     templateUrl: "/partial/cmpoc",
@@ -17,7 +19,7 @@ export class CMPOCComponent implements OnInit {
 
     ngOnInit() {
         this.getPackages();
-        /*toastr.options = {
+        toastr.options = {
             "closeButton": false,
             "debug": false,
             "newestOnTop": false,
@@ -33,7 +35,7 @@ export class CMPOCComponent implements OnInit {
             "hideEasing": "linear",
             "showMethod": "fadeIn",
             "hideMethod": "fadeOut"
-        }*/
+        }
     }
 
     pageTitle = 'CM POC';
@@ -52,6 +54,6 @@ export class CMPOCComponent implements OnInit {
         this.addMode = false;
         this.packages.unshift(newPackage);
 
-        //toastr.success("New Package: '" + newPackage.name + "' submitted!")
+        toastr.success("New Package: '" + newPackage.name + "' submitted!")
     }
 }

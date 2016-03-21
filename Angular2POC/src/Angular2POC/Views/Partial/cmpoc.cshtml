@@ -1,6 +1,9 @@
-﻿@{
-    ViewBag.Title = "CM POC";
-}
-<mvc>
-    <blockquote *ngIf="message">{{message}}</blockquote>
-</mvc>
+﻿<h1 class="page-header">{{pageTitle}}</h1>
+<div class="row placeholders">
+    <div *ngIf="!addMode">
+        <div style="text-align: right"><button (click)="createPackage()">Create new package</button></div>
+        <package-list [packages]="packages"></package-list>
+    </div>
+
+    <package-new *ngIf="addMode" (onNewPackageCreated)="onNewPackageCreated($event)" packages></package-new>
+</div>

@@ -4,7 +4,7 @@ import {FilePackage} from './package.component'
 @Component({
     selector: 'package-detail',
     providers: [],
-    templateUrl: 'src/package-detail.html',
+    templateUrl: '/partial/packagedetail',
     inputs: ['package']
 })
 export class PackageDetailComponent {

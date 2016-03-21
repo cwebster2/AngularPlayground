@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
                     loader: () => System.import("app/components/api.component").then(c => c["ApiComponent"])
                 }),
                 new AsyncRoute({
-                    path: "/cmPOC",
+                    path: "/cmpoc",
                     name: "CMailPOC",
                     loader: () => System.import("app/components/cmpoc.component").then(c => c["CMPOCComponent"])
                 })

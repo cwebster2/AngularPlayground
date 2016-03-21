@@ -1,0 +1,21 @@
+﻿<div *ngIf="package">
+    <hr />
+    <h2 class="sub-header">Package Name: {{package.name}}</h2>
+    <p><strong>Dow Case Reference: {{package.caseReference}}</strong></p>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>File Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="#file of package.files">
+                    <td>{{file.id}}</td>
+                    <td><a href="#" (click)="openDoc()">{{package.caseReference}} {{file.name}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

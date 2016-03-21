@@ -1,4 +1,4 @@
-System.register(["angular2/core"], function(exports_1, context_1) {
+System.register(['angular2/core'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -11,30 +11,33 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var StaticComponent;
+    var PackageDetailComponent;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            StaticComponent = (function () {
-                function StaticComponent() {
+            PackageDetailComponent = (function () {
+                function PackageDetailComponent() {
                 }
-                StaticComponent.prototype.ngOnInit = function () {
-                    this.message = "The 'static.html' was used as the Angular2 'templateUrl'. There is a 'message' property bound to the <blockqoute> element.";
+                PackageDetailComponent.prototype.openDoc = function () {
+                    alert("Open doc");
+                    return false;
                 };
-                StaticComponent = __decorate([
+                PackageDetailComponent = __decorate([
                     core_1.Component({
-                        selector: "static",
-                        templateUrl: "/app/components/static.html"
+                        selector: 'package-detail',
+                        providers: [],
+                        templateUrl: '/partial/packagedetail',
+                        inputs: ['package']
                     }), 
                     __metadata('design:paramtypes', [])
-                ], StaticComponent);
-                return StaticComponent;
+                ], PackageDetailComponent);
+                return PackageDetailComponent;
             }());
-            exports_1("StaticComponent", StaticComponent);
+            exports_1("PackageDetailComponent", PackageDetailComponent);
         }
     }
 });
-//# sourceMappingURL=static.component.js.map
+//# sourceMappingURL=package-detail.component.js.map

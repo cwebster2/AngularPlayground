@@ -1,5 +1,5 @@
-﻿@import {FilePackage} from './package.component';
-@import {File} from './file';
+﻿import {FilePackage} from './package.component';
+import {File} from './file';
 
 var mockFiles = [new File(100, "Some File.pdf"), new File(101, "Another File.pdf")];
 

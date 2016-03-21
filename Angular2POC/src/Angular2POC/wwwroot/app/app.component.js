@@ -1,4 +1,6 @@
-System.register(["angular2/core", "angular2/router", "./components/static.component"], function(exports_1) {
+System.register(["angular2/core", "angular2/router", "./components/static.component"], function(exports_1, context_1) {
+    "use strict";
+    var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -43,7 +45,7 @@ System.register(["angular2/core", "angular2/router", "./components/static.compon
                                 loader: function () { return System.import("app/components/api.component").then(function (c) { return c["ApiComponent"]; }); }
                             }),
                             new router_1.AsyncRoute({
-                                path: "/cmPOC",
+                                path: "/cmpoc",
                                 name: "CMailPOC",
                                 loader: function () { return System.import("app/components/cmpoc.component").then(function (c) { return c["CMPOCComponent"]; }); }
                             })
@@ -63,7 +65,7 @@ System.register(["angular2/core", "angular2/router", "./components/static.compon
                     __metadata('design:paramtypes', [router_1.Router, router_1.Location])
                 ], AppComponent);
                 return AppComponent;
-            })();
+            }());
             exports_1("AppComponent", AppComponent);
         }
     }

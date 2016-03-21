@@ -5,7 +5,7 @@ import {PackageDetailComponent} from './package-detail.component';
 
 @Component({
     selector: 'package-list',
-    templateUrl: 'src/package-list.html',
+    templateUrl: '/partial/packagelist',
     directives: [PackageDetailComponent],
     inputs: ['packages']
 })
