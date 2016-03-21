@@ -41,6 +41,11 @@ System.register(["angular2/core", "angular2/router", "./components/static.compon
                                 path: "/numbers",
                                 name: "Numbers",
                                 loader: function () { return System.import("app/components/api.component").then(function (c) { return c["ApiComponent"]; }); }
+                            }),
+                            new router_1.AsyncRoute({
+                                path: "/cmPOC",
+                                name: "CMailPOC",
+                                loader: function () { return System.import("app/components/cmpoc.component").then(function (c) { return c["CMPOCComponent"]; }); }
                             })
                         ];
                         this.router.config(this.routes);

@@ -30,6 +30,11 @@ export class AppComponent implements OnInit {
                     path: "/numbers",
                     name: "Numbers",
                     loader: () => System.import("app/components/api.component").then(c => c["ApiComponent"])
+                }),
+                new AsyncRoute({
+                    path: "/cmPOC",
+                    name: "CMailPOC",
+                    loader: () => System.import("app/components/cmpoc.component").then(c => c["CMPOCComponent"])
                 })
             ];
 

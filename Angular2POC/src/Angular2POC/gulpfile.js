@@ -23,11 +23,15 @@ var js = [
     './node_modules/typescript/lib/typescript.js',
     './node_modules/jquery/dist/jquery.js',
     './node_modules/es6-shim/es6-shim.min.js*',
-    './node_modules/angular2/es6/dev/src/testing/shims_for_IE.js'
+    './node_modules/angular2/es6/dev/src/testing/shims_for_IE.js',
+    './node_modules/toastr/build/*.js*',
+    './node_modules/dropzone/dist/*.js'
 ];
 
 var css = [
-    './node_modules/bootstrap/dist/css/bootstrap.css'
+    './node_modules/bootstrap/dist/css/bootstrap.css',
+    './node_modules/toastr/build/toastr.css',
+    './node_modules/dropzone/dist/dropzone.css'
 ];
 
 var fonts = [

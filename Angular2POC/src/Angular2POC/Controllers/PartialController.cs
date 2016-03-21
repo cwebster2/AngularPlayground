@@ -13,5 +13,7 @@ namespace Angular2POC.Controllers
         public IActionResult Message() => PartialView();
 
         public IActionResult Numbers() => PartialView();
+
+        public IActionResult cmpoc() => PartialView();
     }
 }
