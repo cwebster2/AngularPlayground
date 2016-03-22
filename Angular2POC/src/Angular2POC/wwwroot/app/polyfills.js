@@ -3,9 +3,7 @@
 // import 'es6-shim';
 // import 'es6-promise';
 // import 'reflect-metadata';
-System.register(['core-js', 'zone.js/dist/zone-microtask', 'zone.js/dist/long-stack-trace-zone'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['core-js', 'zone.js/dist/zone-microtask', 'zone.js/dist/long-stack-trace-zone'], function(exports_1) {
     return {
         setters:[
             function (_1) {},

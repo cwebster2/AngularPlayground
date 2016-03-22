@@ -1,6 +1,4 @@
-System.register(['./file'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['./file'], function(exports_1) {
     var file_1;
     var mockFiles, PACKAGES;
     return {

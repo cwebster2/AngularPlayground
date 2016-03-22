@@ -1,7 +1,7 @@
-﻿<div *ngIf="package">
+﻿<div *ngIf="filepackage">
     <hr />
-    <h2 class="sub-header">Package Name: {{package.name}}</h2>
-    <p><strong>Dow Case Reference: {{package.caseReference}}</strong></p>
+    <h2 class="sub-header">Package Name: {{filepackage.name}}</h2>
+    <p><strong>Case Reference: {{filepackage.caseReference}}</strong></p>
     <div class="table-responsive">
         <table class="table table-striped">
             <thead>
@@ -11,9 +11,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="#file of package.files">
+                <tr *ngFor="#file of filepackage.files">
                     <td>{{file.id}}</td>
-                    <td><a href="#" (click)="openDoc()">{{package.caseReference}} {{file.name}}</a></td>
+                    <td><a href="#" (click)="openDoc()">{{filepackage.caseReference}} {{file.name}}</a></td>
                 </tr>
             </tbody>
         </table>

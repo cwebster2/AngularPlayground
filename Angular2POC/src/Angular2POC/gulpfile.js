@@ -18,20 +18,22 @@ var angularJs = [
 
 var js = [
     './node_modules/bootstrap/dist/js/bootstrap.js',
-    './node_modules/systemjs/dist/system.js',
+    './node_modules/systemjs/dist/system.js*',
     './node_modules/rxjs/bundles/Rx.js',
     './node_modules/typescript/lib/typescript.js',
     './node_modules/jquery/dist/jquery.js',
     './node_modules/es6-shim/es6-shim.min.js*',
+    './node_modules/es6-shim/*.map',
     './node_modules/angular2/es6/dev/src/testing/shims_for_IE.js',
     './node_modules/toastr/build/*.js*',
     './node_modules/dropzone/dist/*.js'
 ];
 
 var css = [
-    './node_modules/bootstrap/dist/css/bootstrap.css',
+    './node_modules/bootstrap/dist/css/bootstrap.css*',
     './node_modules/toastr/build/toastr.css',
-    './node_modules/dropzone/dist/dropzone.css'
+    './node_modules/dropzone/dist/dropzone.css',
+    './css/*.css'
 ];
 
 var fonts = [

@@ -18,7 +18,7 @@ export class PackageNewComponent implements OnInit {
     submitted: boolean = false;
 
     constructor() {
-        this.newPackage = new FilePackage(0, "Null", "None", []);
+        this.newPackage = new FilePackage(0, "", "", []);
         this.newPackage.files = [];
     }
 

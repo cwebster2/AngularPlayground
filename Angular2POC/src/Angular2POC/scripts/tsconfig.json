@@ -16,7 +16,7 @@
   },
   "exclude": [
     "../wwwroot",
-    "typings/main.d.ts",
-    "typings/main"
+    "../typings/main.d.ts",
+    "../typings/main"
   ]
 }

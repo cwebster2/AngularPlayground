@@ -5,10 +5,10 @@ import {FilePackage} from './package.component'
     selector: 'package-detail',
     providers: [],
     templateUrl: '/partial/packagedetail',
-    inputs: ['package']
+    inputs: ['filepackage']
 })
 export class PackageDetailComponent {
-    package: FilePackage;
+    filepackage: FilePackage;
 
     openDoc() {
         alert("Open doc");

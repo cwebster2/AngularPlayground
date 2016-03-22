@@ -1,6 +1,4 @@
-System.register(['angular2/core', './package.component', './file'], function(exports_1, context_1) {
-    "use strict";
-    var __moduleName = context_1 && context_1.id;
+System.register(['angular2/core', './package.component', './file'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -28,7 +26,7 @@ System.register(['angular2/core', './package.component', './file'], function(exp
                 function PackageNewComponent() {
                     this.onNewPackageCreated = new core_1.EventEmitter();
                     this.submitted = false;
-                    this.newPackage = new package_component_1.FilePackage(0, "Null", "None", []);
+                    this.newPackage = new package_component_1.FilePackage(0, "", "", []);
                     this.newPackage.files = [];
                 }
                 PackageNewComponent.prototype.ngOnInit = function () {
@@ -126,7 +124,7 @@ System.register(['angular2/core', './package.component', './file'], function(exp
                     __metadata('design:paramtypes', [])
                 ], PackageNewComponent);
                 return PackageNewComponent;
-            }());
+            })();
             exports_1("PackageNewComponent", PackageNewComponent);
         }
     }

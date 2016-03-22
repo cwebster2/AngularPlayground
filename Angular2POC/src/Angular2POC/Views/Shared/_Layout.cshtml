@@ -8,13 +8,14 @@
     <environment names="Development">
         <!-- Css -->
         <link rel="stylesheet" asp-href-include="~/css/*.css">
+        <link rel="stylesheet" asp-href-include="~/css/cmpoc.css">
         <!-- Js -->
         <script src="~/js/es6-shim.min.js"></script>
         
         <script src="~/js/shims_for_IE.js"></script>       
         <script src="~/js/jquery.js"></script>
         <script src="~/js/system.js"></script>
-        <script src="~/app/polyfill.js"></script>
+        <script src="~/app/polyfills.js"></script>
         <script src="~/js/typescript.js"></script>
         <script src="~/js/bootstrap.js"></script>        
         <script src="~/js/toastr.min.js"></script>
@@ -29,13 +30,14 @@
     <environment names="Production">
         <!-- Css -->
         <link rel="stylesheet" asp-href-include="~/css/*.min.css" asp-append-version="true">
+        <link rel="stylesheet" asp-href-include="~/css/cmpoc.min.css">
         <!-- Js -->
         <script src="~/js/es6-shim.min.js"></script>
         
         <script src="~/js/shims_for_IE.js"></script>
         <script src="~/js/jquery.min.js"></script>
         <script src="~/js/system.min.js"></script>
-        <script src="~/app/polyfill.min.js"></script>        
+        <script src="~/app/polyfills.min.js"></script>        
         <script src="~/js/typescript.min.js"></script>
         <script src="~/js/bootstrap.min.js"></script>
         <script src="~/js/toastr.min.js"></script>
